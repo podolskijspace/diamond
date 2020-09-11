@@ -1,0 +1,26 @@
+<footer class="page-footer" id="page-footer">
+  <div class="container page-footer__container">
+    <div class="page-footer__top">
+      <a href="" class="page-footer__link">
+        {% include "../svg-temp.twig" with {
+          iconName: 'logo',
+          mod: 'page-footer__logo'
+        } %}
+      </a>
+      {% include "../nav.twig" with {
+        navMod: 'page-footer__nav'
+      } %}
+      
+      {% include "../language.twig" %}
+    </div>
+    <div class="page-footer__bottom">
+      <div class="page-footer__copypast page-footer__text">
+        2020 (с) Криптовалютная платформа DIAMOND
+      </div>
+      <div class="page-footer__user page-footer__text">
+        Пользовательское соглашение
+      </div>
+    </div>
+  </div>
+</footer>
+

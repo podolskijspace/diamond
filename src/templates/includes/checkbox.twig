@@ -1,0 +1,12 @@
+<label class="checkbox {{checkboxMod}}">
+  <input type="checkbox" class="checkbox__checkbox">
+  <div class="checkbox__wrapper ">
+    {% include "./svg-temp.twig" with {
+      iconName: 'check',
+      mod: 'checkbox__icon'
+    } %}
+  </div>
+  <div class="checkbox__checkbox-text">
+    Я прочитал и согласен с условиями <br>обслуживания данного сервсиа
+  </div>
+</label>

@@ -1,0 +1,30 @@
+.page-footer {
+  padding: 21.4rem 0 27rem;
+  
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+
+  &__logo {
+    width: 13rem;
+    height: 8.5rem;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__text {
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    font-weight: 500;
+    color: $white;
+  }
+
+
+}

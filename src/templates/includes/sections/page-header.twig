@@ -1,0 +1,19 @@
+
+
+<header class="page-header" id="header">
+  <div class="page-header__top-bg">
+    <div class="container page-header__container">
+      <a href="" class="page-header__link">
+        {% include "../svg-temp.twig" with {
+          iconName: 'logo',
+          mod: 'page-header__logo'
+        } %}
+      </a>
+      {% include "../nav.twig" with {
+        navMod: 'page-header__nav'
+      } %}
+      
+      {% include "../language.twig" %}
+    </div>
+  </div>
+</header>

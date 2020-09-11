@@ -1,0 +1,22 @@
+.btn {
+  padding: 2.2rem 5.6rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.2rem;
+  color: $black;
+  background: linear-gradient(180deg, #FF7C29 0%, #FFDC2E 100%);
+  box-shadow: 0px 4px 30px rgba(255, 134, 41, 0.2);
+  border: 1px solid transparent;
+
+  @include mobile {
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+
+  &--transparent {
+    color: $white;
+    background: transparent;
+    border: 1px solid $white;
+  }
+}

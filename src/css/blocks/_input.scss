@@ -1,0 +1,49 @@
+.input {
+  &__header {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    color: $white;
+    opacity: .5;
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__input {
+    width: 100%;
+    height: 5.7rem;
+    border: 1px solid rgba($white, .25);
+    background: transparent;
+    border-radius: .3rem;
+    padding: .4rem .5rem 0;
+
+    &.error {
+      border-color: #89131E;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $white;
+    }
+    &::-moz-placeholder          {
+      color: $white;
+    }/* Firefox 19+ */
+    &:-moz-placeholder           {
+      color: $white;
+    }/* Firefox 18- */
+    &:-ms-input-placeholder      {
+      color: $white;
+    }
+
+    &--code {
+      width: 12.7rem;
+      flex-shrink: 0;
+    }
+
+    &--num {
+      flex: 1;
+      margin-left: .7rem;
+    }
+  }
+}

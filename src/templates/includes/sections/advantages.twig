@@ -1,0 +1,57 @@
+{% if advantagesList %}
+{% else %}
+{% set advantagesList = [
+  {
+    header: 'Создайте аккаунт',
+    text: 'Зарегистрируйте аккаунт, нажав<br> на ссылку Создать аккаунт,<br> 
+    в верхней части сайта.',
+  },
+  {
+    header: 'Создайте аккаунт',
+    text: 'Зарегистрируйте аккаунт, нажав<br> на ссылку Создать аккаунт,<br> 
+    в верхней части сайта.',
+  },
+  {
+    header: 'Создайте аккаунт',
+    text: 'Зарегистрируйте аккаунт, нажав<br> на ссылку Создать аккаунт,<br> 
+    в верхней части сайта.',
+  },
+  {
+    header: 'Создайте аккаунт',
+    text: 'Зарегистрируйте аккаунт, нажав<br> на ссылку Создать аккаунт,<br> 
+    в верхней части сайта.',
+  },
+  ] %}
+{% endif %}
+
+<div class="advantages" id="advantages">
+  <div class="container advantages__container">
+    {% include "../title.twig" with {
+      title: 'Преимущества',
+      titleSection: 'advantages'
+    } %}
+    {% include "../subtitle.twig" with {
+      subtitle: 'Обозначить преимущества или ключевые моменты, отличающие данный <br>сервис от других в той же нише.',
+      subtitleSection: 'advantages'
+    } %}
+    <ul class="advantages__list">
+      {% for item in advantagesList %}
+        <li class="advantages__item">
+          <div class="advantages__card">
+            <div class="advantages__img">
+              <img src="../../../assets/img/content/{{item.img|default("advantages-1.jpg")}}" alt="photo">
+            </div>
+            <div class="advantages__content">
+              <div class="advantages__header">
+                {{item.header}}
+              </div>
+              <div class="advantages__text">
+                {{item.text}}
+              </div>
+            </div>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

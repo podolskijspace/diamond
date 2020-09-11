@@ -1,0 +1,44 @@
+{% if aboutList %}
+{% else %}
+{% set aboutList = [
+  {
+    num: '1000',
+    text: 'зарегистрированных <br>пользователей',
+  },
+  {
+    num: '10',
+    text: 'стран мира - наши <br>клиенты',
+  },
+  {
+    num: '148 000',
+    text: 'купленных <br> монет',
+  },
+  ] %}
+{% endif %}
+
+<div class="about" id="about">
+  <div class="container about__container">
+    {% include "../title.twig" with {
+      title: 'О нас',
+      titleSection: 'about'
+    } %}
+    {% include "../subtitle.twig" with {
+      subtitle: 'Обозначить: информацию о бирже, зачем нужны, уникальность проекта. Показать, что внутри сервиса нет комисии и опдводных камней.',
+      subtitleSection: 'about'
+    } %}
+    <ul class="about__list">
+      {% for item in aboutList %}
+        <li class="about__item">
+          <div class="about__card">
+            <div class="about__number">
+              {{item.num}}
+            </div>
+            <div class="about__text">
+              {{item.text}}
+            </div>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

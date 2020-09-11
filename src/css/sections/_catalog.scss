@@ -1,0 +1,9 @@
+.catalog {
+  &__tab {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}

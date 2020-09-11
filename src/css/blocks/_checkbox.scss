@@ -1,0 +1,52 @@
+.checkbox {
+  $self: &;
+
+  position: relative;
+  display: flex;
+  
+
+  &__checkbox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: transparent;
+    border: 1px solid rgba($white, .4);
+    border-radius: .3rem;
+    transition: background-color .3s border-color .3s;
+
+    #{$self}__checkbox:checked~& {
+      background: linear-gradient(180deg, #FF7C29 0%, #FFDC2E 100%);
+      border-color: transparent;
+    }
+  }
+
+  &__icon {
+    width: 1.4rem;
+    height: 1.1rem;
+    opacity: 0;
+    transition: opacity .3s;
+
+    #{$self}__checkbox:checked~#{$self}__wrapper & {
+      opacity: 1;
+    }
+  }
+
+  &__checkbox-wrapper {
+    display: flex;
+  }
+
+  &__checkbox-text {
+    margin-left: 1.2rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+}

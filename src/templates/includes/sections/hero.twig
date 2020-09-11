@@ -1,0 +1,38 @@
+{% if heroList %}
+{% else %}
+{% set heroList = [
+  {
+    text: 'Открыть счет',
+    mod: 'hero__btn'
+  },
+  {
+    text: 'Вход',
+    mod: 'btn--transparent hero__btn'
+  },
+  ] %}
+{% endif %}
+
+<section class="hero" id="hero">
+  <div class="container hero__container">
+    {% include "../title.twig" with {
+      title: 'Криптовалютная платформа DIAMOND',
+      titleSection: 'hero',
+      h1: true,
+    } %}
+    {% include "../subtitle.twig" with {
+      subtitle: 'Новый взгляд на криптовалютуНовый взгляд на криптовалюту',
+      subtitleSection: 'hero'
+    } %}
+    <ul class="hero__list">
+      {% for item in heroList %}
+        <li class="hero__item">
+          {% include "../btn.twig" with {
+            btnText: item.text,
+            btnMod: item.mod
+          } %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+

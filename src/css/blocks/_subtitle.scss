@@ -1,0 +1,17 @@
+.subtitle {
+  display: block;
+  max-width: 63rem;
+  margin: auto;
+  margin-bottom: 7rem;
+  @include lato;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  text-align: center;
+  color: $white;
+
+  @include mobile {
+    margin-bottom: 3rem;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+  }
+}

@@ -1,0 +1,19 @@
+@import 'variables';
+@import 'normalize.css/normalize.css';
+@import 'mixins';
+@import 'fonts';
+@import 'animation';
+@import 'png_sprite';
+
+// plugins
+@import 'slick-carousel/slick/slick.css';
+@import 'wowjs/css/libs/animate.css';
+
+// base
+@import 'base';
+
+// blocks
+@import 'blocks/*';
+
+// sections
+@import 'sections/*';

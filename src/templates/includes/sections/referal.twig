@@ -1,0 +1,50 @@
+{% if referalList %}
+{% else %}
+{% set referalList = [
+  {
+    text: 'Уровень 1',
+    percent: '7%',
+  },
+  {
+    text: 'Уровень 2',
+    percent: '5%',
+  },
+  {
+    text: 'Уровень 3',
+    percent: '3%',
+  },
+  {
+    text: 'Уровень 4',
+    percent: '2%',
+  },
+  ] %}
+{% endif %}
+
+<div class="referal" id="referal">
+  <div class="container referal__container">
+    {% include "../title.twig" with {
+      title: 'Партнерская программа',
+      titleSection: 'referal'
+    } %}
+    {% include "../subtitle.twig" with {
+      subtitle: 'На сайте предусмотрена 4 уровневая реферальная программа. После совершения сделки покупки Вашим рефералом, Вы получаете реферальные SMXP от количества купленных SMXP',
+      subtitleSection: 'referal'
+    } %}
+    <ul class="referal__list">
+      {% for item in referalList %}
+        <li class="referal__item">
+          <div class="referal__card">
+            <div class="referal__content">
+              <div class="referal__text">
+                {{item.text}}
+              </div>
+              <div class="referal__percent">
+                {{item.percent}}
+              </div>
+            </div>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

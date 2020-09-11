@@ -1,0 +1,21 @@
+document.addEventListener("DOMContentLoaded", () => {
+  //=require scripts/accordion.js
+  //=require scripts/carousel.js
+  //=require scripts/calculator.js
+  //=require scripts/input.js
+  //=require scripts/ancors.js
+  //=require scripts/phone-mask.js
+  //=require scripts/form.js
+  //=require scripts/addFile.js
+  //=require scripts/popup-photo.js
+  //=require scripts/popup.js
+  //=require scripts/showArrow.js
+  //=require scripts/jsSeveral.js
+  //=require scripts/changeColor.js
+  //=require scripts/accordionPopup.js
+  //=require scripts/header-scroll.js
+  //=require scripts/parallax.js
+  //=require scripts/tabs.js
+  //=require scripts/wow.js
+  //=require scripts/scripts.js
+});

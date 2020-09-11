@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="format-detection" content="telephone=no">
+		<title>
+			{% block title %}{% endblock %}
+		</title>
+		<link rel="stylesheet" href="./assets/css/main.css">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="theme-color" content="#ffffff">
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172521839-1"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+	
+  gtag('config', 'UA-172521839-1');
+</script>
+	</head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172521839-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-172521839-1');
+	</script>
+	<body>
+		<div class="site-wrapper {% block siteWrapperMod %}{% endblock %}">
+			{% include 'includes/sections/page-header.twig' %}
+			<main class="site-content">
+				{% block page %}{% endblock %}
+			</main>
+			{% include 'includes/sections/page-footer.twig' %}
+		</div>
+		<script>
+			if (window.NodeList && !NodeList.prototype.forEach) {
+				NodeList.prototype.forEach = function(callback, thisArg) {
+					thisArg = thisArg || window;
+					for (var i = 0; i < this.length; i++) {
+						callback.call(thisArg, this[i], i, this);
+					}
+				};
+			}
+			if (!Element.prototype.matches) {
+				Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
+			}
+			if (!Element.prototype.closest) {
+				Element.prototype.closest = function(s) {
+					var el = this;
+					do {
+						if (el.matches(s))
+							return el;
+						el = el.parentElement || el.parentNode;
+					} while (el !== null && el.nodeType === 1);
+					return null;
+				};
+			}
+		</script>
+		<script src="./assets/js/vendor.js"></script>
+		<script src="./assets/js/main.js"></script>
+		<div style="display: none;">
+			{% include 'includes/icons.svg' %}
+		</div>
+	</body>
+</html>

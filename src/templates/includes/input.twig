@@ -1,0 +1,13 @@
+<label class="input">
+  <div class="input__header">
+    {{header|default("Заголовок")}}
+  </div>
+  {% if phone %}
+  <div class="input__wrapper">
+    <input type="text" class="input__input input__input--code">
+    <input type="text" class="input__input input__input--num">
+  </div>
+  {% else %}
+  <input type="{% if number %}number{% else %}text{% endif %}" class="input__input">
+  {% endif %}
+</label>

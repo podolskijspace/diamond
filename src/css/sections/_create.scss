@@ -1,0 +1,134 @@
+.create {
+  $self: &;
+  padding: 35rem 0 4.6rem;
+
+  &__title {
+    font-size: 7.2rem;
+    line-height: 121%;
+    margin: 0 0 3.5rem;
+  }
+
+  &__subtitle {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin: 0 auto 10rem;
+  }
+
+  &__btn-list {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 67rem;
+    margin: 0 auto 10rem;
+    padding-bottom: 6rem;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1.5rem;
+      border-radius: 10rem;
+      background: linear-gradient(180deg, #FF7C29 0%, #FFDC2E 100%);
+      opacity: 0.2;
+    }
+  }
+
+  &__btn-item {
+    position: relative;
+    font-size: 3.6rem;
+    line-height: 4.4rem;
+    font-weight: 700;
+    color: $white;
+
+    &:first-child {
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -6rem;
+        left: 50rem;
+        width: 17rem;
+        height: 1.5rem;
+        border-radius: 10rem;
+        background: linear-gradient(180deg, #FF7C29 0%, #FFDC2E 100%);
+        transition: width .3s, left .3s;
+      }
+
+      &.active::after  {
+        left: 0;
+        width: 100%;
+      }
+    }
+    
+    
+  }
+
+  &__content {
+    width: 47.8rem;
+    margin: auto;
+    color: $white;
+  }
+
+  &__tab {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__inputs-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: -1.2rem 0;
+  }
+
+  &__inputs-item {
+    padding: 1.2rem 0;
+    width: 100%;
+  }
+
+  &__referal {
+    position: relative;
+    max-width: 100%;
+    width: max-content;
+    margin: 3.5rem 0 0;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+
+  &__triangle {
+    position: absolute;
+    top: .6rem;
+    right: -4rem;
+    border: 1rem solid transparent; border-top: 1rem solid #000;
+  }
+
+  &__checkbox {
+    margin-top: 5.2rem;
+  }
+
+  &__btn {
+    display: block;
+    width: 20rem;
+    margin: 7rem auto 6rem;
+    padding: 1.8rem 3rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  &__ask {
+    text-align: center;
+    opacity: .8;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+
+  &__link {
+    color: #D2A32D;
+  }
+}

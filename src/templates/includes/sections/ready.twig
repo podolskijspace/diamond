@@ -1,0 +1,36 @@
+{% if readyList %}
+{% else %}
+{% set readyList = [
+  {
+    text: 'Открыть счет',
+    mod: 'ready__btn'
+  },
+  {
+    text: 'Вход',
+    mod: 'btn--transparent ready__btn'
+  },
+  ] %}
+{% endif %}
+
+<div class="ready" id="ready">
+  <div class="container ready__container">
+    {% include "../title.twig" with {
+      title: 'Готовы начать?',
+      titleSection: 'ready'
+    } %}
+    {% include "../subtitle.twig" with {
+      subtitle: 'Создайте учетную запись или войдите в аккаунт',
+      subtitleSection: 'ready'
+    } %}
+    <ul class="ready__list">
+      {% for item in readyList %}
+        <li class="ready__item">
+          {% include "../btn.twig" with {
+            btnText: item.text,
+            btnMod: item.mod
+          } %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

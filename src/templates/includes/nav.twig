@@ -1,0 +1,29 @@
+{% if navList %}
+{% else %}
+{% set navList = [
+  {
+    link: 'О нас',
+    ref: 'about'
+  },
+  {
+    link: 'Партнерская программа',
+    ref: 'referal'
+  },
+  {
+    link: 'Контакты',
+    ref: 'footer'
+  },
+  ] %}
+{% endif %}
+
+<nav class="nav {{navMod}}">
+  <ul class="nav__list">
+    {% for item in navList %}
+      <li class="nav__item">
+        <a href="{{item.ref}}" class="nav__link js-ancor-link">
+          {{item.link}}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

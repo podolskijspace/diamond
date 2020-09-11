@@ -1,0 +1,56 @@
+{% if buyList %}
+{% else %}
+{% set buyList = [
+  {
+    header: 'Создайте аккаунт',
+    text: 'Зарегистрируйте аккаунт, нажав<br> на ссылку Создать аккаунт<br>, 
+    в верхней части сайта.',
+  },
+  {
+    header: 'Пополните баланс',
+    text: 'В личном кабинете перейдите в<br> раздел Пополнить и укажите<br> сумму, на которую Вы хотите<br> пополнить баланс.',
+    img: 'buy-2.svg'
+  },
+  {
+    header: 'Купите “что-то”',
+    text: 'Перейдите в раздел P2P Биржа,<br> затем в блоке Купить создайте<br> заявку на покупку чего-то.',
+    img: 'buy-3.svg'
+  },
+  ] %}
+{% endif %}
+
+<div class="buy" id="buy">
+  <div class="container buy__container">
+    {% include "../title.twig" with {
+      title: 'Как приобрести',
+      titleSection: 'buy'
+    } %}
+    {% include "../subtitle.twig" with {
+      subtitle: 'Пишем, как это легко: нужно сделать всего лишь несколько простых действий:',
+      subtitleSection: 'buy'
+    } %}
+    <ul class="buy__list">
+      {% for item in buyList %}
+        <li class="buy__item">
+          <div class="buy__card">
+            <div class="buy__img">
+              <img src="../../../assets/img/content/{{item.img|default("buy-1.svg")}}" alt="icon">
+            </div>
+            <div class="buy__content">
+              <div class="buy__header">
+                {{item.header}}
+              </div>
+              <div class="buy__text">
+                {{item.text}}
+              </div>
+            </div>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+    {% include "../btn.twig" with {
+      btnText: 'Приобрести',
+      btnMod: 'buy__btn'
+    } %}
+  </div>
+</div>

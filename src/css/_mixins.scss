@@ -1,0 +1,86 @@
+@mixin hover {
+  @include fromDesktop {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+// fonts
+@mixin montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+@mixin lato {
+  font-family: 'Lato', sans-serif;
+}
+
+// brakepoints
+@mixin fromDesktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin k4 {
+  @media screen and (max-width: 2559px) {
+    @content;
+  }
+}
+
+@mixin fullHd {
+  @media screen and (max-width: 1919px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin fromNormalDesktop {
+  @media screen and (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin smallDesktop {
+  @media screen and (max-width: 1279px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: 980px) {
+    @content;
+  }
+}
+
+@mixin lessHorizontalTablet {
+  @media screen and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin lessVerticalTablet {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+// other
+@mixin hide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@mixin show {
+  position: static;
+  opacity: 1;
+  pointer-events: auto;
+}

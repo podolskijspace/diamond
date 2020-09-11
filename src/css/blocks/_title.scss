@@ -1,0 +1,35 @@
+.title {
+  position: relative;
+  padding-top: 4.3rem;
+  margin-bottom: 2.5rem;
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 4.4rem;
+  text-align: center;
+  color: $white;
+
+  @include mobile {
+    padding-top: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 8rem;
+    height: .8rem;
+    background: linear-gradient(180deg, #FF7C29 0%, #FFDC2E 100%);
+    border-radius: 10rem;
+
+    @include mobile {
+      width: 3.5rem;
+      height: .3rem;
+    }
+  }
+}
