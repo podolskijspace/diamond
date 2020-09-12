@@ -13,6 +13,13 @@
 {% endif %}
 
 <div class="ready" id="ready">
+  <div class="ready__logo">
+    {% include "../svg-temp.twig" with {
+      iconName: 'logo',
+      mod: 'ready__logo-icon'
+    } %}
+  </div>
+  <div class="ready__bg"></div>
   <div class="container ready__container">
     {% include "../title.twig" with {
       title: 'Готовы начать?',

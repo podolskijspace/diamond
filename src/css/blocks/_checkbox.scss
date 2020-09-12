@@ -23,6 +23,11 @@
     border-radius: .3rem;
     transition: background-color .3s border-color .3s;
 
+    @include mobile {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+
     #{$self}__checkbox:checked~& {
       background: linear-gradient(180deg, #FF7C29 0%, #FFDC2E 100%);
       border-color: transparent;
@@ -34,6 +39,11 @@
     height: 1.1rem;
     opacity: 0;
     transition: opacity .3s;
+
+    @include mobile {
+      widows: 0.7rem;
+      height: 0.5rem;
+    }
 
     #{$self}__checkbox:checked~#{$self}__wrapper & {
       opacity: 1;
@@ -48,5 +58,11 @@
     margin-left: 1.2rem;
     font-size: 1.2rem;
     line-height: 1.5rem;
+
+    @include mobile {
+      margin-left: 0.5rem;
+      font-size: 0.7rem;
+      line-height: 0.9rem;
+    }
   }
 }

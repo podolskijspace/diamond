@@ -1,6 +1,10 @@
 .about {
   padding: 19rem 0 6rem;
 
+  @include mobile {
+    padding: 5rem 0;
+  }
+
   &__list {
     display: flex;
     margin: 0 -1rem;
@@ -31,11 +35,8 @@
     background: $white;
 
     @include mobile {
-      padding-top: 5rem;
-    }
-
-    @include mobile {
       padding: 1.9rem .5rem;
+      min-height: auto;
     }
   }
 

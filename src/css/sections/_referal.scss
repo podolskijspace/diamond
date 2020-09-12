@@ -2,9 +2,17 @@
   $self: &;
   padding: 19rem 0 6rem;
 
+  @include mobile {
+    padding: 5rem 0 10rem;
+  }
+
   &__list {
     position: relative;
-    margin: 8.2rem 0;
+    margin: -8.2rem 0;
+
+    @include mobile {
+      margin: -3.4rem 0;
+    }
 
     &::after {
       content: '';
@@ -17,6 +25,12 @@
       width: 1.2rem;
       background: linear-gradient(180deg, #FF7C29 0%, #FFDC2E 100%);
       box-shadow: 0px 4px 30px rgba(255, 134, 41, 0.22);
+    
+      @include mobile {
+        width: .5rem;
+        height: calc(100% - 8rem);
+        bottom: 4rem;
+      }
     }
   }
 
@@ -26,6 +40,10 @@
     display: flex;
     justify-content: center;
     padding: 8.2rem 0;
+
+    @include mobile {
+      padding: 3.4rem 0;
+    }
   }
 
   &__card {
@@ -34,6 +52,11 @@
     height: 4rem;
     background: linear-gradient(180deg, #FF7C29 0%, #FFDC2E 100%);
     border-radius: 50%;
+
+    @include mobile {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
   }
 
   &__content {
@@ -45,22 +68,39 @@
     color: $white;
     text-align: left;
 
+    @include mobile {
+      width: 7rem;
+    }
+
     #{$self}__item:nth-child(2n) & {
       left: auto;
       right: -3.5rem;
       transform: translateX(100%);
+
+      @include mobile {
+        right: -.8rem;
+      }
     }
   }
 
   &__text {
     font-size: 2.4rem;
     line-height: 2.9rem;
+
+    @include mobile {
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+    }
   }
 
   &__percent {
     font-size: 4.8rem;
     line-height: 5.9rem;
     font-weight: 700;
+
+    @include mobile {
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+    }
   }
-  
 }

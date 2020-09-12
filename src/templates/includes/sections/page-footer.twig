@@ -11,7 +11,9 @@
         navMod: 'page-footer__nav'
       } %}
       
-      {% include "../language.twig" %}
+      {% include "../language.twig" with {
+        modLang: 'page-footer__language'
+      } %}
     </div>
     <div class="page-footer__bottom">
       <div class="page-footer__copypast page-footer__text">

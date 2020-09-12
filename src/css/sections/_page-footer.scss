@@ -1,22 +1,40 @@
 .page-footer {
   padding: 21.4rem 0 27rem;
+
+  @include mobile {
+    padding: 7rem 0 7.6rem;
+  }
   
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 4rem;
+
+    @include mobile {
+      align-items: flex-end;
+      margin-bottom: 2.9rem;
+    }
   }
 
   &__logo {
     width: 13rem;
     height: 8.5rem;
+
+    @include mobile {
+      width: 4.3rem;
+      height: 2.8rem;
+    }
   }
 
   &__bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include mobile {
+      align-items: flex-end;
+    }
   }
 
   &__text {
@@ -24,7 +42,18 @@
     line-height: 2.9rem;
     font-weight: 500;
     color: $white;
+
+    @include mobile {
+      width: 50%;
+      font-size: 0.8rem;
+      line-height: 1rem;
+    }
   }
 
-
+  &__language {
+    width: 2.5rem;
+    height: 1.6rem;
+    font-size: 0.8rem;
+    margin-bottom: 0.6rem;
+  }
 }

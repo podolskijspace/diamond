@@ -1,28 +1,66 @@
 .ready {
+  position: relative;
+  overflow: hidden;
   padding: 46.6rem 0 38.5rem;
   background: url(../../assets/img/content/ready-bg.png) no-repeat center;
 
+  @include mobile {
+    background: none;
+    padding: 6.3rem 0 7.5rem;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 10;
+  }
+
   &__title {
     text-align: left;
+
+    @include mobile {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
     
     &::before {
       left: 0;
       transform: none;
+
+      @include mobile {
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
   }
 
   &__subtitle {
     text-align: left;
     margin: 0 0 3.5rem;
+
+    @include mobile {
+      margin: auto;
+      margin-bottom: 3rem;
+      width: 20rem;
+      text-align: center;
+    }
   }
 
   &__list {
     display: flex;
     margin: 0 -1.4rem;
+
+    @include mobile {
+      margin: 0 -1rem;
+      justify-content: center;
+    }
   }
 
   &__item {
     padding: 0 1.4rem;
+
+    @include mobile {
+      padding: 0 1rem;
+    }
   }
 
   &__btn {
@@ -30,5 +68,51 @@
     padding: 1.8rem 4rem;
     font-size: 1.6rem;
     line-height: 2rem;
+
+    @include mobile {
+      width: 12.7rem;
+      height: 3.2rem;
+      padding: 0 1rem;
+      font-size: 1rem;
+      line-height: 1.2rem;
+    }
+  }
+
+  &__logo {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 30rem;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -41%);
+    opacity: .8;
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  &__logo-icon {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__bg {
+    display: none;
+
+    @include mobile {
+      display: block;
+      z-index: 5;
+      position: absolute;
+      left: -10rem;
+      top: 2.3rem;
+      width: calc(100% + 50rem);
+      height: 100%;
+      background: linear-gradient(180deg, #070319 26.04%, #4A4455 151.25%);
+      opacity: 0.7;
+      transform: rotate(-3deg)
+    }
   }
 }

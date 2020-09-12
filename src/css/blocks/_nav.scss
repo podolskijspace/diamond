@@ -5,15 +5,27 @@
   &__list {
     display: flex;
     margin: 0 - 3.7rem;
+
+    @include mobile {
+      margin: 0 -.8rem;
+    }
   }
 
   &__item {
     padding: 0 3.7rem;
+
+    @include mobile {
+      padding: 0 .8rem;
+    }
   }
 
   &__link {
     font-size: 2.4rem;
     font-weight: 500;
     color: $white;
+
+    @include mobile {
+      font-size: .8rem;
+    }
   }
 }

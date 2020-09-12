@@ -46,12 +46,12 @@
 <div class="create" id="create">
   <div class="container create__container">
     {% include "../title.twig" with {
-      title: 'Создать аккаунт бесплатно',
+      title: title|default('Создать аккаунт <br> бесплатно'),
       titleSection: 'create',
       h1: true,
     } %}
     {% include "../subtitle.twig" with {
-      subtitle: 'Добро пожаловать на сервис DIAMOND',
+      subtitle: subtitle|default('Добро пожаловать на сервис DIAMOND'),
       subtitleSection: 'create'
     } %}
     <ul class="create__btn-list">
@@ -78,6 +78,12 @@
           </li>
         {% endfor %}
       </ul>
+      {% if enter %}
+        {% include '../btn.twig' with {
+          btnText: 'Войти',
+          btnMod: 'create__btn create__btn--enter'
+        } %}
+      {% else %}
       <div class="create__referal">
         Реферальный ID (необязательно)
         <div class="create__triangle"></div>
@@ -95,6 +101,7 @@
           Войти 
         </a>
       </div>
+      {% endif %}
     </div>
   </div>
 </div>
