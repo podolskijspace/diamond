@@ -49,11 +49,19 @@
     &--code {
       width: 12.7rem;
       flex-shrink: 0;
+
+      @include mobile {
+        width: 7.3rem;
+      }
     }
 
     &--num {
       flex: 1;
       margin-left: .7rem;
+
+      @include mobile {
+        margin-left: 0.4rem;
+      }
     }
   }
 }

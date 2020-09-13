@@ -1,12 +1,12 @@
 {% extends 'templates/base.twig' %}
 
-{% block title %}Войти{% endblock %}
+{% block title %}Добро пожаловать{% endblock %}
 {% block page %}
   {% include 'templates/includes/sections/create.twig' with {
     title: 'Добро пожаловать <br> 
     на DIAMOND!',
-    subtitle: 'Введите электронную почту <br>
-    или телефон, чтобы войти в аккаунт',
-    enter: true,
+    subtitle: 'Несколько способов начать:',
+    welcome: true,
+    modCont: 'create__container--welcome'
   } %}
 {% endblock %}

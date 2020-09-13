@@ -1,0 +1,28 @@
+<div class="card-user">
+  <div class="container card-user__container">
+    <div class="card-user__img">
+
+    </div>
+    <div class="card-user__content">
+      <div class="card-user__login">
+        {{login|default("Логин пользователя")}}
+      </div>
+      <div class="card-user__id">
+        {{id|default("ID пользователя: ********")}}
+      </div>
+      <div class="card-user__data">
+        Время последнего входа: {{dataDate|default("2020-20-20 20:20:20")}} <br>
+        IP: {{dataIP|default("000.000.000.000")}}
+      </div>
+    </div>
+    <div class="card-user__last">
+      <div class="card-user__vip">
+        <img src="../../assets/img/content/diamond.svg" alt="diamond" class="card-user__diamond">
+        VIP: {{vip|default("0")}}
+      </div>
+      <div class="card-user__money">
+        Баланс: {{money|default("00000")}}
+      </div>
+    </div>
+  </div>
+</div>

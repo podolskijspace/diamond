@@ -43,8 +43,55 @@
   ] %}
 {% endif %}
 
+{% if singlePageList %}
+{% else %}
+{% set singlePageList = [
+  {
+    text: 'Зарегистрироваться',
+  },
+  {
+    text: 'Дополнительная защита аккаунта',
+  },
+  {
+    text: 'Ввод средств',
+  },
+] %}
+{% endif %}
+
+{% if welcomeList %}
+{% else %}
+{% set welcomeList = [
+  {
+    title: 'Ввод средств',
+    cards: [
+      {
+        title: 'Ввод фиата',
+        text: 'ТексттекстТексттексттекстТексттексттекстТексттексттекстТексттексттекстТексттексттекстТексттексттекстТексттексттексттекст',
+        img: 'welcome-item-1.svg',
+      },
+      {
+        title: 'Ввод криптовалюты',
+        text: 'ТексттекстТексттексттекстТексттексттекстТексттексттекстТексттексттекстТексттексттекстТексттексттекстТексттексттексттекст',
+        img: 'welcome-item-2.svg',
+      }
+    ]
+  },
+  {
+    title: 'Или просто...',
+    cards: [
+      {
+        title: 'Покупайте криптовалюты 
+        с помощью кредитной карты',
+        text: 'ксттексттекстТексттексттекстТексттексттексттекстксттексттекстТекксттексттекстТексттексттекс',
+        img: 'welcome-item-3.svg',
+      },
+    ]
+  },
+] %}
+{% endif %}
+
 <div class="create" id="create">
-  <div class="container create__container">
+  <div class="container create__container {{modCont}}">
     {% include "../title.twig" with {
       title: title|default('Создать аккаунт <br> бесплатно'),
       titleSection: 'create',
@@ -54,54 +101,101 @@
       subtitle: subtitle|default('Добро пожаловать на сервис DIAMOND'),
       subtitleSection: 'create'
     } %}
-    <ul class="create__btn-list">
-      {% for item in btnList %}
-      <li class="create__btn-item {% if item.active %}active{% endif %}" data-tabclass = "js-create-tabs" data-tabnumber = "{{item.tabnum}}">
-        {{item.text}}
-      </li>
-      {% endfor %}
-    </ul>
-    <div class="create__content">
-      <ul class="create__tabs js-create-tabs">
-        {% for item in tabList %}
-          <li class="create__tab {% if item.active %}active{% endif %}" data-tabnumber = "{{item.tabnum}}">
-            <ul class="create__inputs-list">
-              {% for item in item.inputs %}
-              <li class="create__inputs-item">
-                {% include "../input.twig" with {
-                  header: item.header,
-                  phone: item.phone
-                } %}
-              </li>
+    {% if welcome %}
+      <ul class="create__welcome-list">
+        {% for item in welcomeList %}
+          <li class="create__welcome-item">
+            <div class="create__welcome-title">
+              {{item.title}}
+            </div>
+            <ul class="create__card-list">
+              {% for item in item.cards %}
+                <li class="create__card-item">
+                  <div class="create__card">
+                    <div class="create__card-content">
+                      <div class="create__card-title">
+                        {{item.title}}
+                      </div>
+                      <div class="create__card-text">
+                        {{item.text}}
+                      </div>
+                    </div>
+                    <div class="create__card-img">
+                      <img src="../../../assets/img/content/{{item.img|default('welcome-item-1.svg')}}" alt="{{item.alt|default('card-icon')}}" class="create__card-icon">
+                    </div>
+                  </div>
+                </li>
               {% endfor %}
             </ul>
           </li>
         {% endfor %}
       </ul>
-      {% if enter %}
-        {% include '../btn.twig' with {
-          btnText: 'Войти',
-          btnMod: 'create__btn create__btn--enter'
+    {% elseif singlePage %}
+      <ul class="create__point-list">
+        {% for item in singlePageList %}
+          <li class="create__point-item">
+            <div class="create__point">
+              {% include "../svg-temp.twig" with {
+                iconName: 'check',
+                mod: 'create__point-icon'
+              } %}
+            </div>
+            <div class="create__point-text">
+              {{item.text}}
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <ul class="create__btn-list">
+        {% for item in btnList %}
+        <li class="create__btn-item {% if item.active %}active{% endif %}" data-tabclass = "js-create-tabs" data-tabnumber = "{{item.tabNum}}">
+          {{item.text}}
+        </li>
+        {% endfor %}
+      </ul>
+      <div class="create__content">
+        <ul class="create__tabs js-create-tabs">
+          {% for item in tabList %}
+            <li class="create__tab {% if item.active %}active{% endif %}" data-tabnumber = "{{item.tabNum}}">
+              <ul class="create__inputs-list">
+                {% for item in item.inputs %}
+                <li class="create__inputs-item">
+                  {% include "../input.twig" with {
+                    header: item.header,
+                    phone: item.phone
+                  } %}
+                </li>
+                {% endfor %}
+              </ul>
+            </li>
+          {% endfor %}
+        </ul>
+        {% if enter %}
+          {% include '../btn.twig' with {
+            btnText: 'Войти',
+            btnMod: 'create__btn create__btn--enter'
+          } %}
+        {% else %}
+        <div class="create__referal">
+          Реферальный ID (необязательно)
+          <div class="create__triangle"></div>
+        </div>
+        {% include "../checkbox.twig" with {
+          checkboxMod: 'create__checkbox',
         } %}
-      {% else %}
-      <div class="create__referal">
-        Реферальный ID (необязательно)
-        <div class="create__triangle"></div>
+        {% include '../btn.twig' with {
+          btnText: 'Создать аккаунт',
+          btnMod: 'create__btn'
+        } %}
+        <div class="create__ask">
+          Уже зарегистрированы? 
+          <a href="./enter.html" class="create__link">
+            Войти 
+          </a>
+        </div>
+        {% endif %}
       </div>
-      {% include "../checkbox.twig" with {
-        checkboxMod: 'create__checkbox',
-      } %}
-      {% include '../btn.twig' with {
-        btnText: 'Создать аккаунт',
-        btnMod: 'create__btn'
-      } %}
-      <div class="create__ask">
-        Уже зарегистрированы? 
-        <a href="./enter.html" class="create__link">
-          Войти 
-        </a>
-      </div>
-      {% endif %}
-    </div>
+    {% endif %}
   </div>
 </div>

@@ -1,0 +1,120 @@
+.card-user {
+  padding: 14.7rem 0 15.8rem; 
+  background: $white;
+
+  @include mobile {
+    padding: 2.9rem 0 2.2rem;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+
+    @include mobile  {
+      justify-content: center;
+    }
+  }
+
+  &__img {
+    margin-right: 1.2rem;
+    width: 18.8rem;
+    height: 18.8rem;
+    background: linear-gradient(180deg, #FF7C29 0%, #FFDC2E 100%);
+    border-radius: 50%;
+
+    @include mobile  {
+      flex-shrink: 0;
+      width: 3.7rem;
+      height: 3.7rem;
+      margin-right: 2rem;
+    }
+  }
+
+  &__content {
+    padding-top: 1rem;
+    width: 43rem;
+    margin-right: 16rem;
+
+    @include mobile  {
+      margin-right: 3rem;
+      padding-top: 0;
+      width: 12rem;
+    }
+  }
+
+  &__login {
+    margin-bottom: 1.5rem;
+    font-size: 3.6rem;
+    line-height: 4.4rem;
+
+    @include mobile  {
+      margin-bottom: 0.4rem;
+      font-size: 0.8rem;
+      line-height: 1rem;
+    }
+  }
+
+  &__id {
+    margin-bottom: 3.2rem;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+
+    @include mobile  {
+      margin-bottom: 1rem;
+      font-size: 0.8rem;
+      line-height: 1rem;
+    }
+  }
+
+  &__data {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+
+    @include mobile  {
+      font-size: 5px;
+      line-height: .6rem;
+    } 
+  }
+
+  &__last {
+    width: 18.5rem;
+    background: linear-gradient(180deg, #FF7C29 0%, #FFDC2E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @include mobile {
+      width: 6.5rem
+    }
+  }
+
+  &__vip {
+    font-size: 3.6rem;
+    line-height: 4.4rem;
+    margin-bottom: 1.5rem;
+
+    @include mobile {
+      font-size: .8rem;
+      line-height: 1rem;
+      margin-bottom: .2rem;
+    }
+  }
+
+  &__diamond {
+    vertical-align: baseline;
+    
+    @include mobile {
+      width: .6rem;
+      height: .6rem;
+    }
+  }
+
+  &__money {
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+
+    @include mobile {
+      font-size: .8rem;
+      line-height: 1rem;
+    }
+  }
+}

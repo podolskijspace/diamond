@@ -1,0 +1,28 @@
+<div class="card-btn">
+  <div class="container">
+    <div class="card-btn__card">
+      <div class="card-btn__content">
+        <div class="card-btn__text">
+          Информация о балансе
+        </div>
+        <div class="card-btn__text-bold">
+          0,000000000 BTC
+        </div>
+      </div>
+      <ul class="card-btn__btns-list">
+        <li class="card-btn__btns-item">
+          {% include "../btn.twig" with {
+            btnText: 'Открыть счет',
+            btnMod: 'card-btn__btn'
+          } %}
+        </li>
+        <li class="card-btn__btns-item">
+          {% include "../btn.twig" with {
+            btnText: 'Вход',
+            btnMod: 'btn--transparent card-btn__btn card-btn__btn--transparent'
+          } %}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,86 @@
+.card-btn {
+  margin: 25rem 0;
+  border-radius: .3rem;
+
+  @include mobile {
+    margin: 5rem 0;
+  }
+
+  &__card {
+    display: flex;
+    padding: 13.6rem 14.7rem 13.7rem 19.8rem;
+    background: $white;
+
+    @include mobile {
+      flex-direction: column;
+      padding: 2rem 2rem 2.5rem 1.6rem;
+    }
+  }
+
+  &__content {
+    flex-shrink: 0;
+    margin-right: 5.5rem;
+    width: 34rem;
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 4rem;
+
+    @include mobile {
+      font-size: 1rem;
+      line-height: 1.2rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__text-bold {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+
+    @include mobile {
+      font-size: 1.5rem;
+      line-height: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__btns-list {
+    display: flex;
+    align-items: flex-end;
+    margin: 0 -1.4rem;
+
+    @include mobile {
+      margin: 0 -.5rem;
+    }
+  }
+
+  &__btns-item {
+    padding: 0 1.4rem;
+
+    @include mobile {
+      padding: 0 .5rem;
+    }
+  }
+
+  &__btn {
+    width: 20rem;
+    height: 5.6rem;
+    padding: 0 .5rem;
+    color: #000;
+
+    @include mobile {
+      width: 12.3rem;
+      height: 3.2rem;
+      font-size: 1rem;
+      line-height: 1.2rem;
+    }
+
+    &--transparent {
+      border-color: #423C4E;
+    }
+  }
+}

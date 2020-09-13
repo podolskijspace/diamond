@@ -3,6 +3,7 @@
 
   @include mobile {
     padding: 7rem 0 7.6rem;
+    background: #100B1F;
   }
   
   &__top {
@@ -55,5 +56,11 @@
     height: 1.6rem;
     font-size: 0.8rem;
     margin-bottom: 0.6rem;
+  }
+
+  &__user {
+    @include mobile {
+      text-align: right;
+    }
   }
 }

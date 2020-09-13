@@ -1,18 +1,50 @@
 .nav {
+  $self: &;
+
   display: flex;
   align-items: center;
+
+  &--single-page {
+    padding: 29.7rem 0 17.7rem;
+
+    @include mobile {
+      padding: 8.1rem 0 4.5rem;
+    }
+  }
   
   &__list {
     display: flex;
-    margin: 0 - 3.7rem;
+    margin: 0 -3.7rem;
+
+    #{$self}--single-page & {
+      margin: 0;
+      justify-content: space-between;
+      width: 100%;
+
+      @include mobile {
+        margin: 0 -1.5rem;
+        overflow-x: auto;
+        overflow-y: hidden;
+      }
+    }
 
     @include mobile {
       margin: 0 -.8rem;
+      
     }
   }
 
   &__item {
     padding: 0 3.7rem;
+    
+    #{$self}--single-page &  {
+      padding: 0;
+
+      @include mobile {
+        padding: 0 1.5rem;
+        white-space: nowrap;
+      }
+    }
 
     @include mobile {
       padding: 0 .8rem;

@@ -1,0 +1,149 @@
+.card-sell {
+  margin: 25rem 0 0;
+
+  @include mobile {
+    margin: 5rem 0;
+  }
+  
+  &__card {
+    min-height: 105.4rem;
+    display: flex;
+    flex-direction: column;
+    padding: 7rem 15.4rem 5rem 17.8rem;
+    background: $white;
+    border-radius: .3rem;
+
+    @include mobile {
+      min-height: auto;
+      padding: 2rem 4.1rem 2.8rem 1.6rem;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 3.5rem;
+
+    @include mobile {
+      font-size: 1rem;
+      line-height: 1.2rem;
+      margin-bottom: .7rem;
+    }
+  }
+
+  &__line {
+    margin: 1.5rem 0;
+    width: 100%;
+    height: 1rem;
+    background: linear-gradient(180deg, #FF7C29 0%, #FFDC2E 100%);
+    opacity: 0.2;
+    border-radius: 10rem;
+
+    @include mobile {
+      margin: 1rem 0 .7rem;
+    }
+  }
+
+  &__per {
+    &-list {
+      margin-bottom: 10rem;
+      display: flex;
+      justify-content: space-between;
+
+      @include mobile {
+        margin-bottom: 3.4rem;
+        margin-top: 2rem;
+      }
+    }
+
+    &-item {
+      width: 23rem; 
+
+      @include mobile {
+        width: 8rem;
+      }
+    }
+
+    &-title {
+      margin-bottom: 2.5rem;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+      color: $black;
+      opacity: 0.5;
+
+      @include mobile {
+        margin-bottom: 1.1rem;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+      }
+    }
+
+    &-text {
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 44px;
+      color: $black;
+
+      @include mobile {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+    }
+  }
+
+  &__list {
+    margin: -3.5rem 0;
+
+    @include mobile {
+      margin: -1rem 0;
+    }
+  }
+
+  &__item {
+    padding: 3.5rem 0;
+
+    @include mobile {
+      padding: 1rem 0;
+    }
+  }
+
+  &__text-grey {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: $black;
+    opacity: 0.5;
+
+    @include mobile {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  &__text-bold {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    color: $black;
+
+    @include mobile {
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  &__val {
+    margin-bottom: 2.5rem;
+    @include mobile {
+      margin-bottom: 0.7rem;
+    }
+  }
+}

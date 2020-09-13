@@ -1,0 +1,60 @@
+.card-news {
+  margin: 25rem 0;
+
+  @include mobile {
+    margin: 5rem 0;
+  }
+  
+  &__card {
+    min-height: 38.6rem;
+    padding: 4.4rem 17.8rem 4.5rem 19.8rem;
+    background: $white;
+    border-radius: .3rem;
+    display: flex;
+    flex-direction: column;
+
+    @include mobile {
+      padding: 2rem 1.6rem 2.5rem;
+      min-height: auto;
+    }
+  }
+
+  &__title {
+    margin-bottom: 2.5rem;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+
+    @include mobile {
+      font-size: 1rem;
+      line-height: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__text {
+    margin-bottom: 1rem;
+    flex: 1;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 22px;
+    word-break: break-all;
+
+    @include mobile {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__text-last {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+
+    @include mobile {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+}

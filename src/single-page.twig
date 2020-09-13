@@ -1,0 +1,49 @@
+
+  {% extends 'templates/base.twig' %}
+
+{% block title %}Добро пожаловать{% endblock %}
+{% block page %}
+  <div class="container">
+    {% include "./templates/includes/nav.twig" with {
+      navMod: 'nav--single-page',
+      navList: [
+        {
+          link: 'Панель инструментов',
+        },
+        {
+          link: 'Пополнить',
+        },
+        {
+          link: 'Вывести',
+        },
+        {
+          link: 'Настройки',
+        },
+        {
+          link: 'Рефералы',
+        },
+        {
+          link: 'P2P биржа',
+        },
+        {
+          link: 'Помощь',
+        },
+      ]
+    } %}
+  </div>
+  {% include "templates/includes/sections/card-user.twig" %}
+  {% include 'templates/includes/sections/create.twig' with {
+    title: 'Добро пожаловать <br> 
+    на DIAMOND!',
+    subtitle: 'Еще несколько шагов и готово!',
+    singlePage: true,
+    modCont: 'create__container--single-page'
+  } %}
+  {% include 'templates/includes/sections/card-photo.twig' %}
+  {% include 'templates/includes/sections/card-btn.twig' %}
+  {% include 'templates/includes/sections/card-gold.twig' %}
+  {% include 'templates/includes/sections/card-news.twig' %}
+  {% include 'templates/includes/sections/card-activity.twig' %}
+  {% include 'templates/includes/sections/card-level.twig' %}
+  {% include 'templates/includes/sections/card-sell.twig' %}
+{% endblock %}

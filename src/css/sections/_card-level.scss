@@ -1,0 +1,54 @@
+.card-level {
+  margin: 25rem 0;
+
+  @include mobile {
+    margin: 5rem 0;
+  }
+  
+  &__card {
+    min-height: 24.4rem;
+    display: flex;
+    flex-direction: column;
+    padding: 7rem 19.6rem 7.5rem 19.8rem;
+    background: $white;
+    border-radius: .3rem;
+
+    @include mobile  {
+      min-height: auto;
+      padding: 2rem 1.6rem 2.5rem;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4.5rem;
+
+    @include mobile {
+      margin-bottom: 2.1rem;
+    }
+  }
+
+  &__text {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+
+    @include mobile {
+      font-size: 1rem;
+      line-height: 1.2rem;
+    }
+  }
+
+  &__line {
+    width: 100%;
+    height: 1rem;
+    background: linear-gradient(180deg, #FF7C29 0%, #FFDC2E 100%);
+    opacity: 0.2;
+    border-radius: 10rem;
+
+    @include mobile {
+      height: .4rem;
+    }
+  }
+}
