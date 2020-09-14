@@ -13,13 +13,15 @@
         <li class="card-btn__btns-item">
           {% include "../btn.twig" with {
             btnText: 'Открыть счет',
-            btnMod: 'card-btn__btn'
+            btnMod: 'card-btn__btn',
+            href: 'create.html'
           } %}
         </li>
         <li class="card-btn__btns-item">
           {% include "../btn.twig" with {
             btnText: 'Вход',
-            btnMod: 'btn--transparent card-btn__btn card-btn__btn--transparent'
+            btnMod: 'btn--transparent card-btn__btn card-btn__btn--transparent',
+            href: 'enter.html'
           } %}
         </li>
       </ul>

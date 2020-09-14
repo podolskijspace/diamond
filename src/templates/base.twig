@@ -14,31 +14,25 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172521839-1"></script>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-	
-  gtag('config', 'UA-172521839-1');
-</script>
 	</head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172521839-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-172521839-1');
-	</script>
 	<body>
 		<div class="site-wrapper {% block siteWrapperMod %}{% endblock %}">
 			{% include 'includes/sections/page-header.twig' %}
 			<main class="site-content">
+				{% for item in imagesList %}
+					<li class="images__item {{item.modImg}}">
+						<img src="../assets/img/content/logo-bg.svg" alt="logo-bg" class="images__img">
+					</li>
+				{% endfor %}
 				{% block page %}{% endblock %}
 			</main>
 			{% include 'includes/sections/page-footer.twig' %}
 			{% include "includes/menu.twig" %}
+			{% include "includes/popup.twig" %}
+			{% include "includes/popup.twig" with {
+				popupText: 'Вы успешно <br> зарегистрировались!',
+				popupIcon: 'yes.svg',
+			} %}
 		</div>
 		<script>
 			if (window.NodeList && !NodeList.prototype.forEach) {

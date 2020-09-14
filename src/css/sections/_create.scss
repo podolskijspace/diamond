@@ -224,10 +224,10 @@
     }
 
     &--enter {
-      margin: 8rem 0 0;
+      margin: 8rem auto 0;
 
       @include mobile {
-        margin: 3rem 0 0;
+        margin: 3rem auto 0;
       }
     }
   }

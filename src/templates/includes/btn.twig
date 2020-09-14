@@ -1,3 +1,3 @@
-<button class="btn {{btnMod}}">
+<{% if href %}a{% else %}button{% endif %} class="btn {{btnMod}}" {% if href %}href="../../{{href}}"{% endif %}>
   {{btnText}}
-</button>
+</{% if href %}a{% else %}button{% endif %}>

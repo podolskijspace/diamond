@@ -1,5 +1,9 @@
-<div class="menu">
+<div class="menu js-popup js-dont-close js-menu">
+  <button class="js-close">
+    <img src="../../assets/img/content/menu-close.svg" alt="menu-close" class="menu__close">
+  </button>
+  <img src="../../assets/img/content/logo.svg" alt="logo" class="menu__logo">
   {% include "nav.twig" with {
-    navMod: 'menu__nav'
+    navMod: 'menu__nav nav--vertical'
   } %}
 </div>

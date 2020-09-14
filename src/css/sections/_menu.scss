@@ -1,3 +1,34 @@
 .menu {
-  display: none;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  background: $bg;
+  overflow: auto;
+  transform: translateX(100%);
+  transition: transform .5s;
+
+  &.active {
+    transform: translate(0);
+  }
+
+  &__close {
+    position: absolute;
+    top: 2.2rem;
+    right: 2.2rem;
+  }
+
+  &__logo {
+    width: 5.2rem;
+    height: 3.8rem;
+    margin-bottom: 4rem;
+  }
+
+  &__nav {
+    margin: auto 0; 
+  }
 }

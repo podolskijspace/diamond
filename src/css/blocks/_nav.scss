@@ -16,6 +16,16 @@
     display: flex;
     margin: 0 -3.7rem;
 
+    @include mobile {
+      margin: 0 -.8rem;
+      
+    }
+
+    #{$self}--vertical & {
+      margin: -1.2rem 0;
+      flex-direction: column;
+    }
+
     #{$self}--single-page & {
       margin: 0;
       justify-content: space-between;
@@ -27,15 +37,31 @@
         overflow-y: hidden;
       }
     }
-
-    @include mobile {
-      margin: 0 -.8rem;
-      
-    }
   }
 
   &__item {
     padding: 0 3.7rem;
+
+    @include mobile {
+      padding: 0 .8rem;
+    }
+
+    #{$self}--vertical & {
+      position: relative;
+      padding: 1.2rem 0;
+      width: 100%;
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: .2rem;
+        left: 0;
+        width: 100%;
+        height: .1rem;
+        background: rgba($white, .2);
+      }
+    }
     
     #{$self}--single-page &  {
       padding: 0;
@@ -44,10 +70,6 @@
         padding: 0 1.5rem;
         white-space: nowrap;
       }
-    }
-
-    @include mobile {
-      padding: 0 .8rem;
     }
   }
 
@@ -58,6 +80,10 @@
 
     @include mobile {
       font-size: .8rem;
+    }
+
+    #{$self}--vertical & {
+      font-size: 1.8rem;
     }
   }
 }

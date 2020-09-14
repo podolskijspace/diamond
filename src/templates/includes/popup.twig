@@ -1,0 +1,14 @@
+<div class="popup js-popup {% if popupActive %} active{% endif %}">
+  <div class="popup__wrapper js-dont-close ">
+    <img src="../../assets/img/content/logo.svg" alt="logo" class="popup__logo">
+    <img src="../../assets/img/content/{{popupIcon|default('no.svg')}}" alt="" class="popup__icon">
+    <div class="popup__text">
+      {{popupText|default('Введен не верный логин <br> или пароль')}}
+    </div>
+    {% include "./btn.twig" with {
+      btnText: 'Войти',
+      btnMod: 'popup__btn',
+      href: 'enter.html'
+    } %}
+  </div>
+</div>

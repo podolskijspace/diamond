@@ -52,10 +52,12 @@
   }
 
   &__language {
-    width: 2.5rem;
-    height: 1.6rem;
-    font-size: 0.8rem;
-    margin-bottom: 0.6rem;
+    @include mobile {
+      width: 2.5rem;
+      height: 1.6rem;
+      font-size: 0.8rem;
+      margin-bottom: 0.6rem;
+    }
   }
 
   &__user {

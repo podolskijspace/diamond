@@ -3,11 +3,13 @@
 {% set readyList = [
   {
     text: 'Открыть счет',
-    mod: 'ready__btn'
+    mod: 'ready__btn',
+    href: 'create.html'
   },
   {
     text: 'Вход',
-    mod: 'btn--transparent ready__btn'
+    mod: 'btn--transparent ready__btn',
+    href: 'enter.html'
   },
   ] %}
 {% endif %}
@@ -34,7 +36,8 @@
         <li class="ready__item">
           {% include "../btn.twig" with {
             btnText: item.text,
-            btnMod: item.mod
+            btnMod: item.mod,
+            href: item.href
           } %}
         </li>
       {% endfor %}

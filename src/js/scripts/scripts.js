@@ -45,6 +45,8 @@ function getCoords(elem) {
 
 const onPageRdy = () => {
   tabs();
+  popup();
+
 
   // specific
   ancors();

@@ -15,29 +15,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172521839-1"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-172521839-1');
-    </script>
 </head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172521839-1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-172521839-1');
-</script>
 
 <body>
     <div class="site-wrapper ">
@@ -46,7 +24,7 @@
         <header class="page-header" id="header">
             <div class="page-header__top-bg">
                 <div class="container page-header__container">
-                    <a href="" class="page-header__link">
+                    <a href="./" class="page-header__link">
                         <svg class="icon icon-logo page-header__logo">
                             <use xlink:href="#logo"></use>
                         </svg>
@@ -83,7 +61,7 @@
                     <div class="language page-header__language">
                         RU
                     </div>
-                    <div class="page-header__menu-btn">
+                    <div class="page-header__menu-btn js-menu-btn">
                         <div class="page-header__menu-line"></div>
                         <div class="page-header__menu-line"></div>
                         <div class="page-header__menu-line"></div>
@@ -93,6 +71,23 @@
         </header>
 
         <main class="site-content">
+
+            <li class="images__item main">
+                <img src="../assets/img/content/logo-bg.svg" alt="logo-bg" class="images__img">
+            </li>
+
+            <li class="images__item main">
+                <img src="../assets/img/content/logo-bg.svg" alt="logo-bg" class="images__img">
+            </li>
+
+            <li class="images__item main">
+                <img src="../assets/img/content/logo-bg.svg" alt="logo-bg" class="images__img">
+            </li>
+
+            <li class="images__item main">
+                <img src="../assets/img/content/logo-bg.svg" alt="logo-bg" class="images__img">
+            </li>
+
 
 
 
@@ -109,15 +104,15 @@
                     <ul class="hero__list">
 
                         <li class="hero__item">
-                            <button class="btn hero__btn">
+                            <a class="btn hero__btn" href="../../create.html">
                                 Открыть счет
-                            </button>
+                            </a>
                         </li>
 
                         <li class="hero__item">
-                            <button class="btn btn--transparent hero__btn">
+                            <a class="btn btn--transparent hero__btn" href="../../enter.html">
                                 Вход
-                            </button>
+                            </a>
                         </li>
 
                     </ul>
@@ -246,9 +241,9 @@
                         </li>
 
                     </ul>
-                    <button class="btn buy__btn">
+                    <a class="btn buy__btn" href="../../welcome.html">
                         Приобрести
-                    </button>
+                    </a>
                 </div>
             </div>
 
@@ -269,7 +264,7 @@
                         <li class="advantages__item">
                             <div class="advantages__card">
                                 <div class="advantages__img">
-                                    <img src="../../../assets/img/content/advantages-1.jpg" alt="photo">
+
                                 </div>
                                 <div class="advantages__content">
                                     <div class="advantages__header">
@@ -286,7 +281,7 @@
                         <li class="advantages__item">
                             <div class="advantages__card">
                                 <div class="advantages__img">
-                                    <img src="../../../assets/img/content/advantages-1.jpg" alt="photo">
+
                                 </div>
                                 <div class="advantages__content">
                                     <div class="advantages__header">
@@ -303,7 +298,7 @@
                         <li class="advantages__item">
                             <div class="advantages__card">
                                 <div class="advantages__img">
-                                    <img src="../../../assets/img/content/advantages-1.jpg" alt="photo">
+
                                 </div>
                                 <div class="advantages__content">
                                     <div class="advantages__header">
@@ -320,7 +315,7 @@
                         <li class="advantages__item">
                             <div class="advantages__card">
                                 <div class="advantages__img">
-                                    <img src="../../../assets/img/content/advantages-1.jpg" alt="photo">
+
                                 </div>
                                 <div class="advantages__content">
                                     <div class="advantages__header">
@@ -430,15 +425,15 @@
                     <ul class="ready__list">
 
                         <li class="ready__item">
-                            <button class="btn ready__btn">
+                            <a class="btn ready__btn" href="../../create.html">
                                 Открыть счет
-                            </button>
+                            </a>
                         </li>
 
                         <li class="ready__item">
-                            <button class="btn btn--transparent ready__btn">
+                            <a class="btn btn--transparent ready__btn" href="../../enter.html">
                                 Вход
-                            </button>
+                            </a>
                         </li>
 
                     </ul>
@@ -449,7 +444,7 @@
         <footer class="page-footer" id="page-footer">
             <div class="container page-footer__container">
                 <div class="page-footer__top">
-                    <a href="" class="page-footer__link">
+                    <a href="./" class="page-footer__link">
                         <svg class="icon icon-logo page-footer__logo">
                             <use xlink:href="#logo"></use>
                         </svg>
@@ -499,12 +494,16 @@
         </footer>
 
 
-        <div class="menu">
+        <div class="menu js-popup js-dont-close js-menu">
+            <button class="js-close">
+                <img src="../../assets/img/content/menu-close.svg" alt="menu-close" class="menu__close">
+            </button>
+            <img src="../../assets/img/content/logo.svg" alt="logo" class="menu__logo">
 
 
 
 
-            <nav class="nav menu__nav">
+            <nav class="nav menu__nav nav--vertical">
                 <ul class="nav__list">
 
                     <li class="nav__item">
@@ -527,6 +526,30 @@
 
                 </ul>
             </nav>
+        </div>
+        <div class="popup js-popup ">
+            <div class="popup__wrapper js-dont-close ">
+                <img src="../../assets/img/content/logo.svg" alt="logo" class="popup__logo">
+                <img src="../../assets/img/content/no.svg" alt="" class="popup__icon">
+                <div class="popup__text">
+                    Введен не верный логин <br> или пароль
+    </div>
+                <a class="btn popup__btn" href="../../enter.html">
+                    Войти
+                </a>
+            </div>
+        </div>
+        <div class="popup js-popup ">
+            <div class="popup__wrapper js-dont-close ">
+                <img src="../../assets/img/content/logo.svg" alt="logo" class="popup__logo">
+                <img src="../../assets/img/content/yes.svg" alt="" class="popup__icon">
+                <div class="popup__text">
+                    Вы успешно <br> зарегистрировались!
+    </div>
+                <a class="btn popup__btn" href="../../enter.html">
+                    Войти
+                </a>
+            </div>
         </div>
     </div>
     <script>
