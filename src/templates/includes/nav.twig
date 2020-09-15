@@ -3,11 +3,11 @@
 {% set navList = [
   {
     link: 'О нас',
-    ref: 'about'
+    ref: 'welcome.html'
   },
   {
     link: 'Партнерская программа',
-    ref: 'referal'
+    ref: 'single-page.html'
   },
   {
     link: 'Контакты',
@@ -20,7 +20,7 @@
   <ul class="nav__list">
     {% for item in navList %}
       <li class="nav__item">
-        <a href="{{item.ref}}" class="nav__link js-ancor-link">
+        <a href="../../{{item.ref}}" class="nav__link">
           {{item.link}}
         </a>
       </li>
