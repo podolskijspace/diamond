@@ -25,13 +25,13 @@
     flex-shrink: 0;
     width: 100%;
     height: 100%;
-    max-width: 100.2rem;
-    max-height: 108.1rem;
+    max-width: 65.2rem;
+    max-height: 55.1rem;
     overflow: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 7.5rem 0 0;
+    padding: 2.5rem 0 0;
     background: $bg;
 
     @include mobile {
@@ -44,46 +44,46 @@
   &__logo {
     width: 13rem;
     height: 8.5rem;
-    margin-bottom: 9.2rem;
+    margin-bottom: 2rem;
     flex-shrink: 0;
 
     @include mobile {
       width: 5.8rem;
       height: 3.8rem;
-      margin-bottom: 3.2rem;
+      margin-bottom: 1.5rem;
     }
   }
 
   &__icon{
-    width: 32.2rem;
-    height: 32.2rem;
-    margin-bottom: 9.5rem;
+    width: 20rem;
+    height: 20rem;
+    margin-bottom: 2rem;
     flex-shrink: 0;
 
     @include mobile {
       width: 7.1rem;
       height: 7.1rem;
-      margin-bottom: 1.7rem;
+      margin-bottom: 1.5rem;
     }
   }
 
   &__text {
-    margin-bottom: 8rem;
-    font-size: 3.6rem;
-    line-height: 4.3rem;
+    margin-bottom: 2rem;
+    font-size: 2.4rem;
+    line-height: 3rem;
     text-align: center;
     color: $white;
     flex-shrink: 0;
 
     @include mobile {
-      margin-bottom: 2.5rem;
+      margin-bottom: 1.5rem;
       font-size: 1.8rem;
       line-height: 2.2rem;
     }
   }
 
   &__btn{ 
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
     width: 20rem;
     height: 5.6rem;
     padding: .5rem;
